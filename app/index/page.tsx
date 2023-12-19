@@ -22,8 +22,6 @@ const now = new Date()
          <div className='z-[-1] fixed top-0 left-0 w-full h-screen bg-black opacity-25'>
          </div>
       </div>
-
-
    );
 }
 
