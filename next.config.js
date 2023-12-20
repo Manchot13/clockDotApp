@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
 const nextConfig = {
    /** WebPack の設定を追加 */
   webpack: config => {
