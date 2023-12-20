@@ -19,12 +19,12 @@ export default function Clock({ time }: props) {
 
    return (
       <div className="tabular-nums">
-         <p style = {{fontSize: size,}}>
+         <a style = {{fontSize: size,}}>
             {currentTime.toLocaleTimeString(undefined, {
                hour: "2-digit",
                minute: "2-digit",
             })}
-         </p>
+         </a>
       </div>
    );
 }
