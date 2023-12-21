@@ -26,6 +26,10 @@ export default function RootLayout({
 }) {
    return (
       <html lang="ja">
+         <head>
+            <title>PG Clock</title>
+      <link rel="shortcut icon" href="./static/favicon.ico"/>
+         </head>
          <body className={'${Rubik.variable} ${Rubik.variable} font-Rubik'}>
             {children}
          </body>
