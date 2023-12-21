@@ -4,7 +4,6 @@ import ClockApp from './index/page'
 
 export default function Home() {
    return (
-
       <ClockApp />
    )
 }

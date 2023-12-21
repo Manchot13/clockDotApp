@@ -8,16 +8,13 @@ import Clock from './clockPage';
 import ClockSeconds from './clockSecondsPage';
 import { useState } from "react";
 
-
-
-
 const ClockApp: React.FC = () => {  // HogePropsで型指定した引数をここでかくよ
    /* React.FCは関数コンポーネント(Function Component) の略 tsでは 変数名:型 みたいな感じで指定する */
    const now = new Date()
    const [size, setSize] = useState(16)
    return (
       <div className='h-screen place-content-center bg-gradient-to-t'>
-         
+
          <div className='flex itms-center justify-center gap-4 mt-10'>
             <li>
                <button onClick={() => setSize(size + 4)} className='py-2 px-6 rounded shadow bg-[#333333] text-white hover:bg-[#222222]'>
