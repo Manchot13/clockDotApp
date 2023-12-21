@@ -6,6 +6,7 @@ import BgImg from 'app/image/background.jpg';
 import React from "react";
 import Clock from './clockPage';
 import ClockSeconds from './clockSecondsPage';
+import Setting from './setting';
 import { useState } from "react";
 
 const ClockApp: React.FC = () => {  // HogePropsで型指定した引数をここでかくよ
@@ -14,6 +15,12 @@ const ClockApp: React.FC = () => {  // HogePropsで型指定した引数をこ�
    const [size, setSize] = useState(16)
    return (
       <div className='h-screen place-content-center bg-gradient-to-t'>
+
+      <div className='flex'>
+        <Setting />
+      </div>
+
+
 
          <div className='flex itms-center justify-center gap-4 mt-10'>
             <li>

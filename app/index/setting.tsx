@@ -23,7 +23,7 @@ export default function Setting({ fontSize, isShadow, isSecond }: props) {
   isSecond = checkIsSecond
 
   return (
-    <div>
+    <div className="h-1/2 w-1/3 bg-east-bay-600">
       <h2>設定</h2>
       <div>
         <label>フォントサイズ</label>
