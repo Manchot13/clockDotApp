@@ -6,6 +6,7 @@ import BgImg from 'app/image/background.jpg';
 import React from "react";
 import Clock from './clockPage';
 import ClockSeconds from './clockSecondsPage';
+import Slider from './Slider';
 // import Setting from './setting';
 import { useEffect, useState } from "react";
 
@@ -20,6 +21,9 @@ const ClockApp: React.FC = (props) => {
       setSize(Math.round((width - 320) / 8 + 16));
    }, [width]);
 
+
+
+
    return (
       <div className='h-screen w-screen place-content-center bg-gradient-to-t'>
          <div className='flex'>
@@ -28,6 +32,11 @@ const ClockApp: React.FC = (props) => {
                   <h1 className='m-1 text-xl font-bold'>設定</h1>
                   <div>
                      <label>フォントサイズ: {size}</label>
+                     <div className="App">
+                        <div>
+                           <Slider />
+                        </div>
+                     </div>
                   </div>
                   <div className='flex m-1'>
                      <input type="checkbox" checked={isShadow} onChange={(e) => setIsShadow(e.target.checked)} />
