@@ -6,33 +6,36 @@ import RangeSlider from 'react-bootstrap-range-slider';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 
-export const Slider = () => {
-  const [values, setValues] = useState([20, 50]); // Initialize with min and initial value
-  const [min, setMin] = useState(20);
-  const [max, setMax] = useState(1000);
-  const handleStyle = {
-    width: 10,
-    height: 10,
-    borderRadius: 0,
-  };
+export const Slider = (props :any) => {
+   const [value, setValue] = useState(props.size);
+   const [min, setMin] = useState(20);
+   const [max, setMax] = useState(1000);
 
-  return (
-    <div>
-      <Form>
-        <Form.Group>
-          <Col>
-            <RangeSlider
-              values={values} // Use values prop
-              onChange={(values) => setValues(values)} // Update values state directly
-              max={max}
-              min={min}
-              handleStyle={handleStyle}
-            />
-          </Col>
-        </Form.Group>
-      </Form>
-    </div>
-  );
+   const CheckChange = (props :any) => {
+      // 親コンポーネントから受け取った関数を使って、inputの値を渡す
+      const handleInputChange = (event :any) => {
+        const value = event.target.value;
+        props.handleValueChange(value);
+      };
+   }  
+
+   return (
+      <div>
+         <Form>
+            <Form.Group>
+               <Col>
+                  <RangeSlider
+                     value={value}
+                     onChange={e => setValue(Number(e.target.value))}
+                     max={max}
+                     min={min}
+                     variant='warning'
+                  />
+               </Col>
+            </Form.Group>
+         </Form>
+      </div>
+   );
 };
 
 export default Slider;
