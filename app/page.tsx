@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import Hoge from './index/page'
+import ClockApp from './index/page'
+
 
 export default function Home() {
-  return (
-   <Hoge />
-  )
+   return (
+      <ClockApp />
+   )
 }

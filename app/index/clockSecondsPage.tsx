@@ -17,7 +17,7 @@ export default function Clock({ time }: props) {
    }, []);
 
    return (
-      <div className="text-5xl tabular-nums text-[#FFF] font-bold">
+      <div className="tabular-nums text-[#FFF] font-bold">
          {currentTime.toLocaleTimeString(undefined, { second: "numeric" })}
       </div>
    );
